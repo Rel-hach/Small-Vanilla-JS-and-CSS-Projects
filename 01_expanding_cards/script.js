@@ -1,4 +1,5 @@
 // getting all classes called '.card'
+// 
 const cards = document.querySelectorAll('.card');
 
 // loop through them and listen if an event occured in any of them
