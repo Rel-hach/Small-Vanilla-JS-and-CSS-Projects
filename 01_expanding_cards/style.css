@@ -1,0 +1,73 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Images ..  */
+
+.card-1 { background-image: url(Assets/nature0.jpg); }
+.card-2 { background-image: url(Assets/nature1.jpeg); }
+.card-3 { background-image: url(Assets/nature2.jpg); }
+.card-4 { background-image: url(Assets/nature3.jpg); }
+.card-5 { background-image: url(Assets/nature0.jpg); }
+
+
+
+/* style container of all images */
+
+.cards-container {
+    height: 80vh;
+    width: 90vh;
+    display: flex;
+    gap: 0.3rem;
+}
+
+/* style images */
+
+.card {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5rem;
+    flex: 0.5;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    cursor: pointer;
+}
+
+/* styling the h3 of each card and hiding it if the card is not active */
+
+.card h3 {
+    position: absolute;
+    bottom: 1.2rem;
+    left: 1.2rem;
+    color: wheat;
+    opacity: 0;
+}
+
+.card.is-active {
+    flex: 5;
+}
+
+.card.is-active h3 {
+    opacity: 1;
+    transition: opacity 0.4s 0.4s;
+}
+
+@media (max-width: 480px) {
+    .cards-container {
+        width: 100vw;
+    }
+
+    .card-4,
+    .card-5 {
+        display: none;
+    }
+}
